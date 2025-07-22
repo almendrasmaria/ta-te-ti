@@ -10,7 +10,7 @@ function App() {
     const newBoard = [...board];
     newBoard[index] = turn;
     setBoard (newBoard);
-    
+
     const newTurn = turn === "X" ? "O" : "X"
     setTurn (newTurn)
   }
@@ -18,7 +18,7 @@ function App() {
   return (
   
     <main className='game'>
-      <h1>Tic Tac Toe</h1>
+      <h1 className='tateti-title'>TaTeTi</h1>
       <section className='board'>
         {
           board.map ((value, index) => (

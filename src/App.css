@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+body {
+  background-color: black;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -10,18 +16,27 @@
   grid-template-columns: repeat(3, 80px);
   grid-template-rows: repeat(3,80px);
   justify-content: center;
-  gap: 5px;
+  gap: 15px;
   margin-top: 20px;
 }
 
 .cells {
   width: 80px;
   height: 80px;
-  background-color: hsl(340, 31%, 89%);
-  border: 2px solid #ff0095;
+  border: 3px solid #ff0095;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  color: white;
   cursor: pointer;
+  user-select: none;
+}
+
+.tateti-title {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 60px;
+  color: #ff0095;
 }
