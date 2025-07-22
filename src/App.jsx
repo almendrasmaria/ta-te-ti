@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import './App.css'
 
-
 function App() {
   const [board, setBoard] = useState (Array(9).fill(null));
+  const [turn, setTurn] = useState("X");
+
+  const updateBoard = (index) => {
+
+    const newBoard = [...board];
+    newBoard[index] = turn;
+    setBoard (newBoard);
+    
+    const newTurn = turn === "X" ? "O" : "X"
+    setTurn (newTurn)
+  }
 
   return (
   
@@ -12,7 +22,11 @@ function App() {
       <section className='board'>
         {
           board.map ((value, index) => (
-            <div key={index} className='cells'>
+            <div 
+              key={index}
+              className='cells'
+              onClick={() => updateBoard(index)} 
+            >
               {value}
             </div>
           ))
