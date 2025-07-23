@@ -7,6 +7,10 @@ function App() {
 
   const updateBoard = (index) => {
 
+    if (board[index] === "X" || board[index] === "O") {
+    return;
+    }
+
     const newBoard = [...board];
     newBoard[index] = turn;
     setBoard (newBoard);
