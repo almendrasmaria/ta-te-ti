@@ -29,6 +29,13 @@ function App() {
   const [turn, setTurn] = useState("X");
   const [winner, setWinner] = useState (null); 
 
+  useEffect(() => {
+    const result = checkWinner (board) ; 
+    if (result) {
+      setWinner(result)
+    }
+  }, [board]); 
+
   const updateBoard = (index) => {
 
     if (board[index] === "X" || board[index] === "O") {
