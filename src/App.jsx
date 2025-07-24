@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css'
 
 const winCombos = [
@@ -11,6 +11,18 @@ const winCombos = [
   [0,4,8],
   [2,4,6]
 ]
+
+const checkWinner = (board) => {
+  for (let combo of winCombos) {
+    const [pos1,pos2,pos3] = combo; 
+    if (
+      board[pos1] && board[pos1] === board [pos2] && board [pos1] === board [pos3]
+    ) {
+      return board [pos1]
+    }
+  }
+  return null;
+};
 
 function App() {
   const [board, setBoard] = useState (Array(9).fill(null));
