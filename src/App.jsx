@@ -27,6 +27,7 @@ const checkWinner = (board) => {
 function App() {
   const [board, setBoard] = useState (Array(9).fill(null));
   const [turn, setTurn] = useState("X");
+  const [winner, setWinner] = useState (null); 
 
   const updateBoard = (index) => {
 
