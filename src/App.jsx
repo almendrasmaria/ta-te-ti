@@ -38,9 +38,7 @@ function App() {
 
   const updateBoard = (index) => {
 
-    if (board[index] === "X" || board[index] === "O") {
-    return;
-    }
+    if (winner || board[index]) return;
 
     const newBoard = [...board];
     newBoard[index] = turn;
