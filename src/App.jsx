@@ -10,12 +10,17 @@ function App() {
   const [winner, setWinner] = useState (null); 
 
   useEffect(() => {
-    const result = checkWinner (board) ; 
+    const result = checkWinner(board);
     if (result) {
-      setWinner(result)
-      alert(`El ganador es ${result}!`);
+      setWinner(result);
     }
-  }, [board]); 
+  }, [board]);
+
+  useEffect(() => {
+    if (winner) {
+      alert(`El ganador es ${winner}!`);
+    }
+  }, [winner]);
 
   const updateBoard = (index) => {
 
