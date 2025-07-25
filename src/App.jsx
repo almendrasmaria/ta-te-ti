@@ -65,6 +65,14 @@ function App() {
           ))
         }
       </section>
+      
+    <button className='reset-button' onClick={() => {
+      setBoard(Array(9).fill(null));
+      setWinner(null);
+      setTurn("X");
+    }}>
+      Reiniciar juego
+    </button>
     </main>
   
 
