@@ -35,6 +35,7 @@ function App() {
     const result = checkWinner (board) ; 
     if (result) {
       setWinner(result)
+      alert(`El ganador es ${result}!`);
     }
   }, [board]); 
 
