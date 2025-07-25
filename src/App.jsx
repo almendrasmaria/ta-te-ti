@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRepeat } from '@fortawesome/free-solid-svg-icons';
 import './App.css'
 
 const winCombos = [
@@ -71,7 +73,7 @@ function App() {
       setWinner(null);
       setTurn("X");
     }}>
-      Reiniciar juego
+      <FontAwesomeIcon icon={faRepeat} />
     </button>
     </main>
   
