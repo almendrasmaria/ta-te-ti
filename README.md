@@ -20,12 +20,12 @@ Este es un juego para dos personas donde se van turnando para poner “X” y �
    ```
 
 2. Instala dependencias
-3. 
+
    ```sh
    npm install
    ```
 
-4. Ejecuta el proyecto
+3. Ejecuta el proyecto
 
    ```sh
    npm run dev
