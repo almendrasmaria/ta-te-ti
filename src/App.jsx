@@ -11,14 +11,21 @@ function App() {
 
   useEffect(() => {
     const result = checkWinner(board);
+
     if (result) {
       setWinner(result);
+    } else if (!board.includes(null)) {
+      setWinner("Empate");
     }
   }, [board]);
 
   useEffect(() => {
     if (winner) {
-      alert(`El ganador es ${winner}!`);
+      if (winner === "Empate") {
+        alert("Es un empate!");
+      } else {
+        alert(`El ganador es ${winner}!`);
+      }
     }
   }, [winner]);
 
