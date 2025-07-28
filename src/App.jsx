@@ -45,6 +45,7 @@ function App() {
               key={index}
               className='cells'
               onClick={() => updateBoard(index)} 
+              style={{ color: value === "X" ? "#EF5DA8" : value === "O" ? "#FCDDEC" : "" }}
             >
               {value}
             </div>
