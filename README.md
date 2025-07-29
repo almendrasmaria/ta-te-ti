@@ -2,6 +2,8 @@
 
 Este es un juego para dos personas donde se van turnando para poner “X” y “O” en el tablero. El juego avisa automáticamente cuándo alguien gana o si hay un empate. También incluye un botón para empezar una partida nueva cuando quieras.
 
+![Ta Te Ti en acción](https://github.com/almendrasmaria/ta-te-ti/blob/main/src/assets/tateti.gif)
+
 ## 📚 Conocimientos aplicados
 
 - **Hooks de React**: uso de `useState` y `useEffect` para manejar el estado del tablero, el turno y la lógica de detección de ganador o empate.
